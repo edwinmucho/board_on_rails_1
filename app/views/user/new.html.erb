@@ -1,0 +1,16 @@
+<h1>회원가입</h1>
+<p>회원 가입 페이지</p>
+<!--<form action='/user/create' method='post'>-->
+<!--    email : <input type='text' name='email'><br/>-->
+<!--    password : <input type='password' name='password'><br/>-->
+<!--    <input type='submit' value='회원가입'>-->
+<!--</form>-->
+
+
+<%= form_tag("/user/create", method: "post") do %>
+  <%= label_tag(:email, 'Email : ')%>
+  <%= text_field_tag(:email) %><br>
+    <%= label_tag(:password, 'Password : ')%>
+  <%= password_field_tag(:password) %><br>
+  <%= submit_tag('가입하기')%>
+<%end%>
